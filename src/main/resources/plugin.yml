@@ -1,0 +1,22 @@
+name: ITo-BanHammer
+version: '1.0'
+main: pl.polsatgranie.itomsd.banHammer.BanHammer
+api-version: '1.13'
+load: STARTUP
+authors: [ PolsatGraniePL ]
+description: IToMSD plugin
+website: https://itomsd.com/
+permissions:
+  itomsd.banhammer:
+    description: Allows use of the BanHammer item
+    default: op
+commands:
+  banhammer:
+    description: Gives a player the BanHammer item or opens the BanHammer GUI for a player
+    usage: /<command> [player]
+    aliases: [bhammer, bh, hammer]
+  bhreload:
+    description: Reloads the configuration
+    usage: /<command>
+    aliases:
+      - banhammerreload

@@ -1,0 +1,88 @@
+#------------------------------------------------------------
+#|                                                          |
+#|      _  _______        __     __    _____   ____         |
+#|     | ||___ ___|      |  \   /  |  / ____| |  _ \        |
+#|     | |   | |   ___   | |\\ //| | | (___   | | \ \       |
+#|     | |   | |  / _ \  | | \_/ | |  \___ \  | |  ) )      |
+#|     | |   | | | (_) | | |     | |  ____) | | |_/ /       |
+#|     |_|   |_|  \___/  |_|     |_| |_____/  |____/        |
+#|                                                          |
+#|                                                          |
+#------------------------------------------------------------
+#|                 +==================+                     |
+#|                 |     BanHammer    |                     |
+#|                 |------------------|                     |
+#|                 |        1.0       |                     |
+#|                 |------------------|                     |
+#|                 |  PolsatGraniePL  |                     |
+#|                 +==================+                     |
+#------------------------------------------------------------
+#
+# Hello, if you need help or have an idea that will improve our plugin,
+#                   then be sure to contact us:
+#
+#  IToMSD Website: https://itomsd.com/
+#  IToMSD Discord: https://dc.itomsd.com/
+#  IToMSD SpigotMC: https://www.spigotmc.org/resources/authors/itomsd.1983449/
+
+
+
+
+# Settings for the BanHammer item:
+# id = Type of Item
+# name = Name of Item
+# lore = Description of Item
+
+item:
+  id: STICK
+  name: "&4&lBanHammer"
+  lore:
+    - "&7Use this stick to ban, kick, or mute players"
+
+
+
+
+# gui-size = Size of the GUI (9/18/27/36/45/54)
+#
+#  <name>:
+#    item: <material>
+#    name: "&c<displayname>"
+#    lore:
+#      - "&7<lore>"
+#    command: "<command> %player%"
+#    slot: <slot>
+
+gui-size: 27
+gui:
+  ban:
+    item: BARRIER
+    name: "&cBan"
+    lore:
+      - "&7Click to ban the player"
+    command: "ban %player%"
+    slot: 11
+
+  kick:
+    item: BLAZE_POWDER
+    name: "&eKick"
+    lore:
+      - "&7Click to kick the player"
+    command: "kick %player%"
+    slot: 13
+
+  mute:
+    item: TRIPWIRE_HOOK
+    name: "&dMute"
+    lore:
+      - "&7Click to mute the player"
+    command: "mute %player%"
+    slot: 15
+
+
+
+
+# Messages
+
+no-permission-message: '&cYou do not have permission to use this command.'
+banhammer-give: "&aYou have been given the BanHammer!"
+plugin-reloaded: "&aPlugin reloaded"
