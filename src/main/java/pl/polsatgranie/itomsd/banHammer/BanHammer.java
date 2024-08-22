@@ -28,7 +28,7 @@ public class BanHammer extends JavaPlugin implements CommandExecutor, Listener {
 
     @Override
     public void onEnable() {
-        Metrics metrics = new Metrics(this, 22933);
+        new Metrics(this, 22933);
         this.getLogger().info("""
 
                 ------------------------------------------------------------
@@ -165,7 +165,7 @@ public class BanHammer extends JavaPlugin implements CommandExecutor, Listener {
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
-        if (event.getView().getTitle().equals("BanHammer Menu")) {
+        if (event.getView().getTitle().contains("BanHammer Menu")) {
             event.setCancelled(true);
             ItemStack clickedItem = event.getCurrentItem();
             if (clickedItem != null && clickedItem.getType() != Material.AIR) {
